@@ -10,8 +10,13 @@ export default function(state = initialState, action) {
         case FETCH_POSTS:
             return {
                 ...state,
-                items: action.posts
+                items: action.payload
             };
+        case ADD_POST:
+            return {
+                ...state,
+                item: action.payload
+            }
         default: 
             return state;
     }
