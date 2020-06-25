@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 class Posts extends Component {
     state = {
         posts: []
-    }
-
-    componentDidMount() {
-        fetch('https://jsonplaceholder.typicode.com/posts').then(res => res.json()).then(data => this.setState({ posts: data }))
     }
 
     render() {
